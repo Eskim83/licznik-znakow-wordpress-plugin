@@ -4,7 +4,7 @@
  * Plugin Name:       Prosty licznik znaków od eskim.pl
  * Plugin URI:        https://eskim.pl/kurs-tworzenia-wtyczek-w-wordpress/
  * Description:       Przykład tworzenia wtyczek w WordPress na podstawie kursu https://eskim.pl/kurs-tworzenia-wtyczek-w-wordpress/
- * Version:           1.0
+ * Version:           1.01
  * Requires at least: 5.2
  * Requires PHP:      5.6
  * Author:            Maciej Włodarczak
@@ -16,11 +16,17 @@
  
 define('ESKIM_PL_IMAGES_URL', plugin_dir_url(__FILE__).'images/');
 
-
 if (!function_exists('eskim_pl_admin_menu_render')) :
 function eskim_pl_admin_menu_render() {
 	
-	echo '';
+	?>
+		<div class="notice notice-warning">
+		<h1 class="wp-heading-inline">Witaj!</h1>
+		<p>To jest demonstracyjna wersja wtyczki zbudowana na podstawie <a href="https://eskim.pl/kurs-tworzenia-wtyczek-w-wordpress/">Kursu tworzenia wtyczek w WordPress</a></p>
+		<p>Jeżeli przydał Ci się skrypt lub masz jakiekolwiek uwagi wejdź na stronę i zostaw komentarz (nie trzeba się rejestrować). Będzie mi bardzo miło.</p>
+		<p>Będzie mi jeszcze milej, jeżeli zostawisz link do powyższej strony lub artykułu.</p>
+		</div>
+	<?php 
 }
 endif;
 
@@ -44,43 +50,9 @@ function eskim_pl_add_menu_eskim() {
 eskim_pl_add_menu_eskim();
 endif;
 
-function eskim_pl_admin_menu_render() {
-	
-	?>
 
-		<div class="notice notice-warning">
-		<h1 class="wp-heading-inline">Witaj!</h1>
-		<p>To jest demonstracyjna wersja wtyczki zbudowana na podstawie <a href="https://eskim.pl/kurs-tworzenia-wtyczek-w-wordpress/">Kursu tworzenia wtyczek w WordPress</a></p>
-		<p>Jeżeli przydał Ci się skrypt lub masz jakiekolwiek uwagi wejdź na stronę i zostaw komentarz (nie trzeba się rejestrować). Będzie mi bardzo miło.</p>
-		<p>Będzie mi jeszcze milej, jeżeli zostawisz link do powyższej strony lub artykułu.</p>
-		</div>
-	<?php 
-}
-
-if (!function_exists('eskim_pl_add_submenu_statystyki')) :
-function eskim_pl_add_submenu_statystyki() {
-		
-	if (function_exists('eskim_pl_admin_statystyki_render')) {
-		add_action('admin_menu', function () {
-			
-			add_submenu_page(
-		
-				'eskim',
-				'Statystki',
-				'Statystki',
-				'manage_options',
-				'eskim-statystyki',
-				'eskim_pl_admin_statystyki_render'
-			);
-		});
-		
-	}
-}
-eskim_pl_add_submenu_statystyki();
-endif;
-	
 // statsy
-
+if (!function_exists('eskim_pl_admin_statystyki_render')) :
 function eskim_pl_admin_statystyki_render() {
 	
 	if (!current_user_can( 'manage_options' )) return;
@@ -152,6 +124,29 @@ function eskim_pl_admin_statystyki_render() {
 	</div>
 	<?php
 }
+endif;
+
+if (!function_exists('eskim_pl_add_submenu_statystyki')) :
+function eskim_pl_add_submenu_statystyki() {
+		
+	if (function_exists('eskim_pl_admin_statystyki_render')) {
+		add_action('admin_menu', function () {
+			
+			add_submenu_page(
+		
+				'eskim',
+				'Statystki',
+				'Statystki',
+				'manage_options',
+				'eskim-statystyki',
+				'eskim_pl_admin_statystyki_render'
+			);
+		});
+		
+	}
+}
+eskim_pl_add_submenu_statystyki();
+endif;
 
 
  ?>
