@@ -3,8 +3,12 @@ Wersja: 1.0
 
 Na podstawie artykułu: https://eskim.pl/kurs-tworzenia-wtyczek-w-wordpress/
 
+***
+
 Jeżeli przydał Ci się skrypt lub masz jakiekolwiek uwagi wejdź na stronę i zostaw komentarz (nie trzeba się rejestrować). Będzie mi bardzo miło.
 Będzie mi jeszcze milej, jeżeli zostawisz link do powyższej strony lub artykułu.
+
+***
 
 Skrypt zlicza znaki w artykułach opublikowanych i wyświetla je w tabelce z podsumowaniem
 
