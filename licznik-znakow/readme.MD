@@ -17,9 +17,6 @@ Skrypt liczy znaki we wpisach i wyświetla ich liczbę w menu.
 - umożliwia wstawienie shortcode [eskim_pl_ile_znakow] wyświetlając liczbę znaków w aktualnym tekście
 
 
-[eskim_pl_ile_znakow]
-
-
 -- INSTALACJA --
 
 Należy przenieść wtyczkę do katalogu z pluginami w WordPress i uruchomić z poziomu pluginów w WordPress.
