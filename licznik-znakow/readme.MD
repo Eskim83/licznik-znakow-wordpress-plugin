@@ -11,7 +11,11 @@ Będzie mi jeszcze milej, jeżeli zostawisz link do powyższej strony lub artyku
 
 Skrypt liczy znaki we wpisach i wyświetla ich liczbę w menu.
 
-Dodatkowo udostępnia shortcode, który wyświetla liczbę znaków aktualnego artykułu w zadanym miejscu:
+- dodaje menu z liczbą znaków w każdym artykule
+- korzysta z opcji
+- korzysta z plików tłumaczeń
+- umożliwia wstawienie shortcode [eskim_pl_ile_znakow] wyświetlając liczbę znaków w aktualnym tekście
+
 
 [eskim_pl_ile_znakow]
 
