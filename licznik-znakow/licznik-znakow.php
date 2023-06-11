@@ -15,6 +15,13 @@
  * Domain Path:       /languages
  */
 
+if ( !function_exists( 'add_action' ) ) {
+
+	echo 'Zapraszam do artykułu <a href="https://eskim.pl/wlasna-wtyczka-w-wordpress-na-przykladzie-licznika-znakow//">Własna wtyczka na przykładzie licznika znaków</a>';
+	exit;
+}
+
+
 $eskim_pl_post_length = 0;
 function eskim_pl_count_post_chars($content) {
 
