@@ -2,24 +2,18 @@ Autor: Maciej Włodarczak (eskim.pl)
 
 Wersja: 1.0
 
-Na podstawie artykułu: https://eskim.pl/kurs-tworzenia-wtyczek-w-wordpress/
+Na podstawie artykułu: https://eskim.pl/generowanie-liczb-losowych-w-pythonie/
 
 ***
 Jeżeli przydał Ci się skrypt lub masz jakiekolwiek uwagi wejdź na stronę i zostaw komentarz (nie trzeba się rejestrować). Będzie mi bardzo miło.
 Będzie mi jeszcze milej, jeżeli zostawisz link do powyższej strony lub artykułu.
 ***
 
-Skrypt liczy znaki we wpisach i wyświetla ich liczbę w menu.
+Komputer losuje liczbę w przedziale 1-100, a następnie użytkownik musi ją odgadnąć:
 
-- dodaje menu z liczbą znaków w każdym artykule
-- korzysta z opcji
-- korzysta z plików tłumaczeń
-- umożliwia wstawienie shortcode [eskim_pl_ile_znakow] wyświetlając liczbę znaków w aktualnym tekście
-
-
--- INSTALACJA --
-
-Należy przenieść wtyczkę do katalogu z pluginami w WordPress i uruchomić z poziomu pluginów w WordPress.
+- jeżeli zgadnie program się kończy
+- jeżeli poda zbyt małą lub zbyt dużą wartość dostaje stosowną informację
+- jeżeli liczba jest poza zakresem lub nie jest to liczba obsługiwany jest wyjątek
 
 
 -- ODPOWIEDZIALNOŚĆ --
